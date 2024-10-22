@@ -33,7 +33,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		memcpy(preKeys, keys, 256);
 		Novice::GetHitKeyStateAll(keys);
 		/// ↓更新処理ここから
-
+		//
 		switch (currentScene) {
 		case Scenes::Title:
 			if (preKeys[DIK_SPACE] == 0 && keys[DIK_SPACE] != 0) {
@@ -42,14 +42,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			break;
 		case Scenes::GAME:
 			//何かしらの条件でGameClear,Overシーンへ移行
+			//仮で1キーを押したとき
 			if (preKeys[DIK_1] == 0 && keys[DIK_1] != 0) {
 				currentScene = Scenes::Clear;
 			}
+			//仮で2キーを押したとき
 			else if (preKeys[DIK_2] == 0 && keys[DIK_2] != 0) {
 				currentScene = Scenes::Over;
 			}
 			break;
-
 		case Scenes::Clear:
 			gameClearScene.Update(keys, preKeys);
 			//IsTitleのフラグが立ったらタイトルへ
@@ -64,13 +65,15 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 				currentScene = Scenes::Title;
 			}
 			break;
-		}               
+		}    
 		/// ↑更新処理ここまで
 		/// ↓描画処理ここから
 		switch (currentScene) {
 		case Scenes::Title:
+
 			break;
 		case Scenes::GAME:
+
 			break;
 		case Scenes::Clear:
 			gameClearScene.Draw();
