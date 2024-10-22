@@ -13,7 +13,5 @@ void GameClear::Update(char* preKeys,char*keys) {
 }
 
 void GameClear::Draw() {
-	/*
-	if(もし判定がGAces)
-	*/
+
 }
