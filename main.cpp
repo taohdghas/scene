@@ -56,7 +56,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 			//IsTitleのフラグが立ったらタイトルへ
 			if (gameClearScene.IsTitle) {
 				currentScene = Scenes::Title;
-			}
+			}//hasiridasetomatosup//int color = p; p + a + e == 4444444;
 			break;
 		case Scenes::Over:
 			gameOverScene.Update(keys, preKeys);
