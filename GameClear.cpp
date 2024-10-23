@@ -13,5 +13,5 @@ void GameClear::Update(char* preKeys,char*keys) {
 }
 
 void GameClear::Draw() {
-
+	Novice::DrawSprite(120, -120, moziHandle, 0.8f,0.8f, 0.0f, 0xFFFFFFFF);
 }

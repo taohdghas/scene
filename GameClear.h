@@ -12,6 +12,6 @@ public:
 	//タイトル移行フラグ
 	bool IsTitle = false;
 	//リソース
-
+	int moziHandle = Novice::LoadTexture("./gameclear.png");
 };
 
